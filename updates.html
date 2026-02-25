@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HQP Updates | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.updates-layout {
+  max-width: 900px; margin: 0 auto;
+}
+.update-item {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 16px; padding: 36px;
+  margin-bottom: 28px; transition: all 0.3s ease;
+  display: grid; grid-template-columns: 100px 1fr; gap: 28px;
+  align-items: start;
+}
+.update-item:hover { box-shadow: 0 8px 28px rgba(10,22,40,0.08); transform: translateY(-3px); }
+.update-date {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  border-radius: 12px; padding: 16px;
+  text-align: center; color: white;
+}
+.update-date .month { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7; }
+.update-date .day { font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; line-height: 1; }
+.update-date .year { font-size: 0.75rem; opacity: 0.6; }
+.update-content h3 { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 10px; }
+.update-content p { font-size: 0.92rem; color: var(--text-body); line-height: 1.7; }
+.update-tag {
+  display: inline-block; margin-bottom: 10px;
+  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 12px;
+  background: rgba(14,140,140,0.1); color: var(--teal);
+  border: 1px solid rgba(14,140,140,0.2);
+}
+.newsletter-notice {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  border-radius: 20px; padding: 40px;
+  text-align: center; margin-bottom: 48px;
+}
+.newsletter-notice h2 { font-family: 'Libre Baskerville', serif; color: white; font-size: 1.4rem; margin-bottom: 10px; }
+.newsletter-notice p { color: rgba(255,255,255,0.65); font-size: 0.92rem; line-height: 1.65; }
+
+@media (max-width: 600px) {
+  .update-item { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Resources</div>
+  <h1>HQP Updates</h1>
+  <p>The latest news, software updates, and newsletter content from HeartQuest Global. Also available here if you're unable to receive updates via email.</p>
+</div>
+
+<section class="section">
+  <div class="updates-layout">
+    <div class="newsletter-notice reveal">
+      <h2>📬 Newsletter Archive</h2>
+      <p>The Newsletter is added to this site in case you are unable to access it via email. All updates and announcements are posted here for member reference.</p>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Mar</div><div class="day">15</div><div class="year">2024</div></div>
+      <div class="update-content">
+        <span class="update-tag">Software Update</span>
+        <h3>HQP Platform Enhancement — Bioimpedance Integration</h3>
+        <p>The latest HQP update includes improved integration with the Quantum VII BIA. All body composition readings now populate automatically into the HQP dashboard with enhanced visualization of Phase Angle trending over time.</p>
+      </div>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Feb</div><div class="day">28</div><div class="year">2024</div></div>
+      <div class="update-content">
+        <span class="update-tag">Education</span>
+        <h3>New Video Series: Meridian Systems &amp; HRV Correlation</h3>
+        <p>Dr. Becchetti has released a new series of educational videos exploring the relationship between Chinese medicine meridian systems and HRV data from the HeartQuest Professional. Available in the Video Library.</p>
+      </div>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Jan</div><div class="day">20</div><div class="year">2024</div></div>
+      <div class="update-content">
+        <span class="update-tag">Product News</span>
+        <h3>B3 Sciences BFR Bands — Now Available with Member Savings</h3>
+        <p>We've partnered with B3 Sciences to offer HQP members exclusive savings on Blood Flow Restriction training bands. These have been extensively tested and are now recommended for integration with HQP protocols.</p>
+      </div>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Dec</div><div class="day">10</div><div class="year">2023</div></div>
+      <div class="update-content">
+        <span class="update-tag">Newsletter</span>
+        <h3>December 2023 Newsletter — Year in Review</h3>
+        <p>Our year-end newsletter covers the most significant advances in HRV clinical application, a review of case studies from 2023, and a preview of upcoming educational content and product integrations for 2024.</p>
+      </div>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Nov</div><div class="day">5</div><div class="year">2023</div></div>
+      <div class="update-content">
+        <span class="update-tag">Software Update</span>
+        <h3>Brain Gauge Data Export Enhancement</h3>
+        <p>Updated Brain Gauge integration now allows for improved data export and visualization within the HQP. Cognitive assessment scores are now displayed alongside autonomic nervous system parameters for side-by-side analysis.</p>
+      </div>
+    </div>
+
+    <div class="update-item reveal">
+      <div class="update-date"><div class="month">Oct</div><div class="day">18</div><div class="year">2023</div></div>
+      <div class="update-content">
+        <span class="update-tag">Education</span>
+        <h3>New Guided Setup Service — $150 for New HQP Owners</h3>
+        <p>We've launched a formal Guided Setup service for new HeartQuest Professional owners. One hour of live help to set up your new account and a complete tour of how to navigate the HQP. Book online through the Support section.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:12px;" class="reveal">
+      <a href="contact.html" class="btn btn-primary">Subscribe to Updates</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

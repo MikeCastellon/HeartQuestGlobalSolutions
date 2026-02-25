@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Education | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.edu-featured {
+  max-width: 1100px; margin: 0 auto;
+}
+.edu-hero-card {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  border-radius: 24px; padding: 60px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  align-items: center; margin-bottom: 60px;
+  position: relative; overflow: hidden;
+}
+.edu-hero-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(14,140,140,0.18), transparent);
+}
+.edu-hero-card h2 {
+  font-family: 'Libre Baskerville', serif;
+  color: white; font-size: 2rem; margin-bottom: 16px;
+  position: relative;
+}
+.edu-hero-card p { color: rgba(255,255,255,0.7); line-height: 1.75; font-size: 0.98rem; position: relative; }
+.edu-hero-card .btn-group { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; position: relative; }
+.edu-visual {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 36px;
+  text-align: center; position: relative;
+}
+.edu-visual-icon { font-size: 60px; margin-bottom: 16px; }
+.edu-visual h3 { font-family: 'Libre Baskerville', serif; color: white; font-size: 1.2rem; margin-bottom: 8px; }
+.edu-visual p { color: rgba(255,255,255,0.55); font-size: 0.85rem; }
+
+.edu-categories {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+.edu-cat-card {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 16px; padding: 32px;
+  transition: all 0.3s ease;
+}
+.edu-cat-card:hover { box-shadow: 0 10px 32px rgba(10,22,40,0.1); transform: translateY(-4px); }
+.edu-cat-icon {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(14,140,140,0.12), rgba(26,58,107,0.12));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin-bottom: 18px;
+}
+.edu-cat-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1.1rem; color: var(--navy); margin-bottom: 10px; }
+.edu-cat-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.65; margin-bottom: 20px; }
+.edu-tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 12px; margin-right: 6px; margin-bottom: 6px;
+}
+.tag-free { background: rgba(14,140,140,0.1); color: var(--teal); border: 1px solid rgba(14,140,140,0.2); }
+.tag-paid { background: rgba(200,149,42,0.1); color: var(--gold); border: 1px solid rgba(200,149,42,0.2); }
+.tag-members { background: rgba(26,58,107,0.1); color: var(--blue-mid); border: 1px solid rgba(26,58,107,0.2); }
+
+@media (max-width: 800px) {
+  .edu-hero-card { grid-template-columns: 1fr; padding: 36px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Clinical Education</div>
+  <h1>Advanced Education for HQP Practitioners</h1>
+  <p>Deep-dive clinical education from Dr. Karimov, Dr. Kessler, and Dr. Becchetti — covering HRV interpretation, Brain Gauge analysis, case reviews, and integrative protocols.</p>
+</div>
+
+<section class="section">
+  <div class="edu-featured">
+    <div class="edu-hero-card reveal">
+      <div>
+        <div class="page-hero-label" style="margin-bottom:16px;">Flagship Program</div>
+        <h2>HeartQuest Advanced Education Platform</h2>
+        <p>This website is dedicated to Health Providers where members have access to Resources for Success, Advanced Education, and Supporting Solutions via educational videos supporting the HQP modalities, as well as tools to help you in your practice.</p>
+        <p style="margin-top:14px;">Each professional must complete the Sign Up process to Register to become a Member and gain full access to the education library.</p>
+        <div class="btn-group">
+          <a href="video-library.html" class="btn btn-gold">Access Video Library</a>
+          <a href="index.html" class="btn btn-outline-white">Learn More</a>
+        </div>
+      </div>
+      <div class="edu-visual">
+        <div class="edu-visual-icon">🎓</div>
+        <h3>Member Education Hub</h3>
+        <p>Register as a health provider member to access the complete education library</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; max-width:520px; margin:0 auto 40px;" class="reveal">
+      <div class="section-label">Education Categories</div>
+      <h2 class="section-title">What You'll Learn</h2>
+      <div class="section-divider" style="margin:16px auto;"></div>
+    </div>
+
+    <div class="edu-categories">
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">🫀</div>
+        <h3>HRV Interpretation</h3>
+        <p>Advanced heart rate variability analysis and clinical interpretation using the HeartQuest Professional platform. Learn to read HQP parameters at a deeper level.</p>
+        <span class="edu-tag tag-free">Free Content</span>
+        <span class="edu-tag tag-paid">Premium Content</span>
+      </div>
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">🧠</div>
+        <h3>Brain Gauge Analysis</h3>
+        <p>Interpretation of Brain Gauge cognitive assessments and how to correlate findings with HRV data for comprehensive patient evaluation.</p>
+        <span class="edu-tag tag-members">Members Only</span>
+      </div>
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">📊</div>
+        <h3>Case Reviews</h3>
+        <p>Dr. Karimov, Dr. Kessler, and Dr. Becchetti review actual patient cases on the HQP and Brain Gauge with clinical commentary and recommendations.</p>
+        <span class="edu-tag tag-paid">Monetized Videos</span>
+      </div>
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">🔗</div>
+        <h3>Meridian Integration</h3>
+        <p>The nervous system's connection to Meridians from Chinese medicine, giving indications of Minerals, Hormones, and more. Uncovering amazing body relationships.</p>
+        <span class="edu-tag tag-members">Members Only</span>
+      </div>
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">💊</div>
+        <h3>Nutritional Protocols</h3>
+        <p>Solutions from multiple nutrition companies that can be most effective for your patient population as identified by HQP assessment data.</p>
+        <span class="edu-tag tag-members">Members Only</span>
+      </div>
+      <div class="edu-cat-card reveal">
+        <div class="edu-cat-icon">🛠️</div>
+        <h3>Clinical Tools</h3>
+        <p>A variety of helpful tools for your clinic. The HQP Newsletter is also accessible here in case you're unable to receive it via email.</p>
+        <span class="edu-tag tag-free">Free Access</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-wide" style="text-align:center;">
+    <div class="reveal">
+      <div class="section-label">Get Started</div>
+      <h2 class="section-title">Ready to Deepen Your Clinical Education?</h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="section-subtitle" style="margin: 0 auto 32px;">Register as a member to unlock the full education library. Some content is free, some monetized — all designed to enhance your use of the HeartQuest Professional.</p>
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+        <a href="video-library.html" class="btn btn-primary btn-lg">Browse Video Library</a>
+        <a href="guided-setup.html" class="btn btn-gold btn-lg">Book Guided Setup</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

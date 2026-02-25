@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guided Setup | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.setup-layout {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.3fr 1fr;
+  gap: 60px; align-items: start;
+}
+.service-card {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(10,22,40,0.06);
+}
+.service-card-header {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  padding: 40px; text-align: center; position: relative; overflow: hidden;
+}
+.service-card-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,140,140,0.2), transparent);
+}
+.service-icon { font-size: 48px; margin-bottom: 16px; position: relative; }
+.service-card-header h2 {
+  font-family: 'Libre Baskerville', serif;
+  color: white; font-size: 1.4rem; margin-bottom: 6px;
+  position: relative;
+}
+.service-card-header p { color: rgba(255,255,255,0.65); font-size: 0.88rem; position: relative; }
+.service-details { padding: 36px; }
+.service-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px; margin-bottom: 28px;
+}
+.meta-item {
+  background: var(--off-white); border-radius: 12px; padding: 16px;
+  text-align: center;
+}
+.meta-item .meta-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 4px; }
+.meta-item .meta-value { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; color: var(--navy); font-weight: 700; }
+.includes-list { list-style: none; margin-bottom: 28px; }
+.includes-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 10px 0; border-bottom: 1px solid var(--light-gray);
+  font-size: 0.9rem; color: var(--text-body);
+}
+.includes-list li:last-child { border-bottom: none; }
+.includes-list li::before { content: '✓'; color: var(--teal); font-weight: 700; flex-shrink: 0; }
+
+.sidebar-content { position: sticky; top: 90px; }
+.info-card {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 16px; padding: 28px; margin-bottom: 24px;
+}
+.info-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--navy); margin-bottom: 16px; }
+.faq-item { margin-bottom: 16px; }
+.faq-item h4 { font-size: 0.88rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.faq-item p { font-size: 0.85rem; color: var(--text-body); line-height: 1.6; }
+.support-card {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  border-radius: 16px; padding: 28px; color: white;
+}
+.support-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1rem; margin-bottom: 16px; }
+.support-line { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+.support-line a { color: rgba(255,255,255,0.8); text-decoration: none; }
+.support-line a:hover { color: white; }
+
+@media (max-width: 800px) {
+  .setup-layout { grid-template-columns: 1fr; }
+  .sidebar-content { position: static; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">HQP Support</div>
+  <h1>Book a Guided Setup</h1>
+  <p>Live, one-on-one help to get your HeartQuest Professional account set up and a complete tour of how to navigate the HQP system.</p>
+</div>
+
+<section class="section">
+  <div class="setup-layout">
+    <div>
+      <div class="service-card reveal">
+        <div class="service-card-header">
+          <div class="service-icon">🖥️</div>
+          <h2>Guided Setup for New HQP Owners</h2>
+          <p>Available Online — Live Video Session</p>
+        </div>
+        <div class="service-details">
+          <div class="service-meta">
+            <div class="meta-item">
+              <div class="meta-label">Duration</div>
+              <div class="meta-value">1 Hour</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Investment</div>
+              <div class="meta-value">$150</div>
+            </div>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-body); line-height:1.75; margin-bottom:24px;">Live help to set up your new HeartQuest Professional account with a complete tour of how to navigate the HQP. This session is designed for brand-new HQP owners who want to get started on the right foot.</p>
+          <h3 style="font-family:'Libre Baskerville', serif; font-size:1rem; color:var(--navy); margin-bottom:12px;">What's Included</h3>
+          <ul class="includes-list">
+            <li>Account creation and initial software configuration</li>
+            <li>Complete navigation tour of the HQP platform</li>
+            <li>Practice profile setup and customization</li>
+            <li>Patient database setup walkthrough</li>
+            <li>Running your first test assessment together</li>
+            <li>Q&A time for your specific questions</li>
+          </ul>
+          <a href="mailto:Info@hqp-global.com?subject=Guided%20Setup%20Booking%20Request" class="btn btn-primary btn-full btn-lg">Book a Guided Setup — $150</a>
+          <p style="text-align:center; font-size:0.8rem; color:var(--mid-gray); margin-top:12px;">Email us to schedule your session at a time that works for you.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-content reveal">
+      <div class="info-card">
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-item">
+          <h4>Who is this session for?</h4>
+          <p>New HeartQuest Professional owners who have just received their device and need help getting set up and oriented to the software.</p>
+        </div>
+        <div class="faq-item">
+          <h4>How does the online session work?</h4>
+          <p>We'll connect via video call (Zoom or similar). You'll share your screen so our team can guide you through the setup in real time.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What do I need before the session?</h4>
+          <p>Have the HQP software downloaded and your device connected. Have your practice information handy for account setup.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I purchase the HQP here?</h4>
+          <p>For purchasing the HeartQuest Professional, please visit our sister website <a href="https://www.hqp-global.com/" target="_blank" style="color:var(--teal);">hqp-global.com</a>.</p>
+        </div>
+      </div>
+
+      <div class="support-card">
+        <h3>Need Technical Support?</h3>
+        <div class="support-line">📞 <a href="tel:+14156466112">+1 (415) 646-6112</a></div>
+        <div class="support-line">📧 <a href="mailto:Info@hqp-global.com">Info@hqp-global.com</a></div>
+        <div style="border-top:1px solid rgba(255,255,255,0.1); margin: 16px 0; padding-top:16px;">
+          <p style="font-size:0.8rem; color:rgba(255,255,255,0.5); margin-bottom:10px;">For Technical Issues:</p>
+          <div class="support-line">👨‍💻 Shawn Hoover, CTO</div>
+          <div class="support-line">📞 <a href="tel:+16322520968">+1 (632) 252-0968</a></div>
+          <div class="support-line">📧 <a href="mailto:shawn@hqp-global.com">shawn@hqp-global.com</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

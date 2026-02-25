@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.product-full {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 60px;
+  padding-top: 48px;
+}
+.product-row {
+  display: grid; grid-template-columns: 1fr 1.8fr; gap: 48px;
+  align-items: start;
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 20px; overflow: hidden;
+  transition: all 0.35s ease;
+}
+.product-row:hover { box-shadow: 0 16px 48px rgba(10,22,40,0.1); transform: translateY(-4px); }
+.product-row.reverse { grid-template-columns: 1.8fr 1fr; }
+.product-row.reverse .product-visual { order: 2; }
+.product-visual {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  padding: 48px 36px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  min-height: 280px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.product-visual::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,140,140,0.2), transparent);
+}
+.product-icon {
+  width: 80px; height: 80px; border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; margin-bottom: 20px; position: relative;
+}
+.product-visual h3 {
+  font-family: 'Libre Baskerville', serif;
+  color: white; font-size: 1.3rem; margin-bottom: 6px;
+  position: relative;
+}
+.product-visual .tagline { color: rgba(255,255,255,0.55); font-size: 0.85rem; position: relative; }
+.product-badge {
+  position: absolute; top: 16px; right: 16px;
+  background: var(--gold); color: white;
+  font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px; z-index: 1;
+}
+.product-content { padding: 40px 36px 40px 0; }
+.product-content h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem; color: var(--navy); margin-bottom: 6px;
+}
+.product-content .product-subtitle { font-size: 0.85rem; color: var(--teal); font-weight: 500; margin-bottom: 18px; letter-spacing: 0.3px; text-transform: uppercase; }
+.product-content p { font-size: 0.93rem; color: var(--text-body); line-height: 1.75; margin-bottom: 14px; }
+.product-pricing {
+  display: flex; align-items: center; gap: 20px;
+  padding: 16px 0; border-top: 1px solid var(--light-gray);
+  margin-top: 20px;
+}
+.price-original { font-size: 0.85rem; color: var(--mid-gray); text-decoration: line-through; }
+.price-member { font-size: 1.4rem; font-weight: 700; color: var(--navy); }
+.price-code {
+  background: rgba(200,149,42,0.1); border: 1px solid rgba(200,149,42,0.3);
+  color: var(--gold); font-size: 0.8rem; font-weight: 600;
+  padding: 4px 10px; border-radius: 6px;
+  font-family: monospace;
+}
+.coming-soon-badge {
+  display: inline-block;
+  background: rgba(14,140,140,0.1); border: 1px solid rgba(14,140,140,0.3);
+  color: var(--teal); font-size: 11px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 20px;
+  margin-top: 16px;
+}
+
+@media (max-width: 800px) {
+  .product-row, .product-row.reverse { grid-template-columns: 1fr; }
+  .product-row.reverse .product-visual { order: 0; }
+  .product-content { padding: 28px; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">HQP Integrated Modalities</div>
+  <h1>Products Researched &amp; Recommended</h1>
+  <p>Tools carefully selected to integrate with the HeartQuest Professional, expanding your clinical assessment capabilities with member-exclusive savings.</p>
+</div>
+
+<section class="section">
+  <div class="product-full">
+
+    <!-- Brain Gauge -->
+    <div class="product-row reveal">
+      <div class="product-visual">
+        <div class="product-badge">Member Savings</div>
+        <div class="product-icon">🧠</div>
+        <h3>Brain Gauge Pro</h3>
+        <div class="tagline">Brain Function Evaluation</div>
+      </div>
+      <div class="product-content">
+        <h2>Brain Gauge Pro</h2>
+        <div class="product-subtitle">Cognitive Assessment &amp; Brain Fitness</div>
+        <p>The Brain Gauge is a cognitive assessment tool that uses touch-based sensory testing to measure your brain function. It is the quickest and most accurate way to evaluate and track improvement in cognitive fitness.</p>
+        <p>The Brain Gauge lets you test 8 essential components of brain health: Speed/Reaction Time, Accuracy, Time Order Judgment (TOJ), Time Perception, Plasticity, Focus, and Corticalmetric — a comprehensive brain fitness score.</p>
+        <p>When used in conjunction with the HeartQuest Professional (HQP), that information populates directly into the HQP. If you're using Nootropics such as Lion's Mane, Bacopa, any Peptides for brain function, neuroVIZR, or lipid replacement, the Brain Gauge will track improvement. Extensive studies on concussions show when it's safe to return to play.</p>
+        <div class="product-pricing">
+          <div>
+            <div class="price-original">Retail: $3,299</div>
+            <div class="price-member">$2,969.10</div>
+          </div>
+          <div class="price-code">HQPRO auto-applied</div>
+          <a href="https://www.corticalmetrics.com/affiliate/hqpro" target="_blank" class="btn btn-primary">Purchase Brain Gauge</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quantum VII -->
+    <div class="product-row reverse reveal">
+      <div class="product-content" style="padding: 40px 0 40px 36px;">
+        <h2>Quantum VII BIA</h2>
+        <div class="product-subtitle">Bioelectrical Impedance Analyzer</div>
+        <p>The Quantum VII measures body composition, hydration status, and cellular health. It's the perfect complement to the HQP, giving indications of Intracellular Water, Extracellular Water, and Total Body Water. When Extracellular Water exceeds Intracellular Water it can indicate toxicity.</p>
+        <p>The most important reading is the Phase Angle — an extraordinary indicator and predictor of total health. Phase Angle measures the strength, resiliency, and energy storage capacity of the cell membrane system. Higher values are better. Multiple major studies confirm it as a highly accurate, non-invasive prognostic tool.</p>
+        <p>The Quantum VII also measures Body Composition (Fat Free Mass vs Over Fat), enabling patient tracking through healthy diet and exercise. All readings populate into the HQP.</p>
+        <div class="product-pricing">
+          <div>
+            <div class="price-original">Reg. Price: $3,290</div>
+            <div class="price-member">$2,961</div>
+          </div>
+          <div class="price-code">HQP10 at checkout</div>
+          <a href="https://rjlsystems.com/products/quantum-vii-bioelectrical-impedance-analyzer-bia" target="_blank" class="btn btn-primary">Purchase Quantum VII</a>
+        </div>
+      </div>
+      <div class="product-visual">
+        <div class="product-badge">Member Savings</div>
+        <div class="product-icon">⚡</div>
+        <h3>Quantum VII</h3>
+        <div class="tagline">Bioimpedance Analysis</div>
+      </div>
+    </div>
+
+    <!-- NeuroVIZR -->
+    <div class="product-row reveal">
+      <div class="product-visual">
+        <div class="product-badge">Coming Soon</div>
+        <div class="product-icon">✨</div>
+        <h3>NeuroVIZR</h3>
+        <div class="tagline">Brain Wellness &amp; Relaxation</div>
+      </div>
+      <div class="product-content">
+        <h2>NeuroVIZR</h2>
+        <div class="product-subtitle">Light &amp; Sound Brain Technology</div>
+        <p>How do you change the pattern of someone constantly producing stress chemistry? The statement "You grow the brain you cultivate" applies here. The NeuroVIZR uses Light and Sound technology to benefit everybody.</p>
+        <p>Using Audio Visual Entrainment (AVE), the brain responds by synchronizing its electrical cycle to the same rhythm as the device — similar to the tuning fork analogy. AVE significantly impacts cognitive function, improves blood flow, helps achieve peak mental performance, improves memory, reduces stress, betters sleep, and increases energy levels.</p>
+        <p>No added fees or memberships. Specific sequences of guided programs for better sleep, reduced stress, anxiety relief and more. The perfect complement to the HQP for patients wired for stress.</p>
+        <div class="notice-box" style="margin-top:20px;">
+          <p><strong>Reference:</strong> <em>Why Zebras Don't Get Ulcers</em> — <a href="https://a.co/d/gX2OKAC" target="_blank" style="color:var(--teal);">Available on Amazon</a></p>
+        </div>
+        <div class="coming-soon-badge">~ Coming Soon ~</div>
+      </div>
+    </div>
+
+    <!-- Osumex -->
+    <div class="product-row reverse reveal">
+      <div class="product-content" style="padding: 40px 0 40px 36px;">
+        <h2>Osumex Urine Test Kits</h2>
+        <div class="product-subtitle">Adrenal Function &amp; Oxidative Stress</div>
+        <p>In today's world people are under constant stress — and how they adapt shows up visually in the HQP parameters. We can also get a sense of long-term stress from a simple in-office urine test evaluating adrenal status.</p>
+        <p><strong>Adrenal Test:</strong> Hyper-state signs include restlessness, difficulty sleeping, increased anxiety, and feeling "wired." Hypo-state manifests as fatigue, low blood pressure, muscle weakness, and hypoglycemia. Both can be tracked over time in the HQP.</p>
+        <p><strong>Oxidative Stress Test:</strong> A color-change urine test measuring Malondialdehyde (MDA) — the most present by-product of lipid peroxidation and indicator of free radical activation and cell membrane damage.</p>
+        <div class="product-pricing">
+          <div><div class="price-member" style="font-size:1.1rem;">Member Savings Applied</div></div>
+          <a href="https://osumex.us/practitioner-kessler/" target="_blank" class="btn btn-primary">Purchase Osumex</a>
+        </div>
+        <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="https://www.amazon.com/s?k=urine+cups+with+lids" target="_blank" class="btn btn-outline btn-sm">Urine Cups on Amazon</a>
+          <a href="https://www.amazon.com/Plastic-Line-Drying-Polyethylene-Single/dp/B08DWX588Q/" target="_blank" class="btn btn-outline btn-sm">Test Tube Rack on Amazon</a>
+        </div>
+      </div>
+      <div class="product-visual">
+        <div class="product-badge">Member Savings</div>
+        <div class="product-icon">🧪</div>
+        <h3>Osumex Test Kits</h3>
+        <div class="tagline">Adrenal &amp; Oxidative Stress</div>
+      </div>
+    </div>
+
+    <!-- B3 Sciences -->
+    <div class="product-row reveal">
+      <div class="product-visual">
+        <div class="product-badge">Member Savings</div>
+        <div class="product-icon">💪</div>
+        <h3>B3 Sciences</h3>
+        <div class="tagline">BFR Blood Flow Restriction Bands</div>
+      </div>
+      <div class="product-content">
+        <h2>B3 Sciences BFR Bands</h2>
+        <div class="product-subtitle">Blood Flow Restriction Training</div>
+        <p>BFR training is supported by extensive research demonstrating its effectiveness in enhancing muscle strength, hypertrophy, and endurance at significantly lower training intensities than traditional methods.</p>
+        <p><strong>Innovative Multi-Air Chamber Design:</strong> B3 offers one of the only Multi-Air Chamber Bands on the market. This patented technology ensures the bands do not create a tourniquet effect. Pressure distributes evenly — no Doppler required to measure blood flow.</p>
+        <p>Safe for individuals from 9 to 90 years old, recognized as #1 for comfort, and preferred by USA Olympic teams and NFL teams. The most effective BFR Bands for exercise, rehabilitation, and athletic performance.</p>
+        <div class="product-pricing">
+          <div><div class="price-member" style="font-size:1.1rem;">Member Savings Applied</div></div>
+          <a href="https://143875.prob3.com/" target="_blank" class="btn btn-primary">Purchase B3 Bands</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VeRelief -->
+    <div class="product-row reverse reveal">
+      <div class="product-content" style="padding: 40px 0 40px 36px;">
+        <h2>VeRelief Vagus Nerve Stimulator</h2>
+        <div class="product-subtitle">By Hoolest — Parasympathetic Support</div>
+        <p>By now you know the importance of the Vagus Nerve and why we need to tone and improve its function. We've tested several devices and found the easiest to use is the Hoolest VeRelief device.</p>
+        <p>VeRelief improves Parasympathetic function, decreasing stress and anxiety, improving sleep, and giving the user a more balanced nervous system. It's also the most cost-effective and user-friendly Vagal Nerve device we've found.</p>
+        <div class="notice-gold notice-box" style="margin-top:16px;">
+          <p>Use coupon code <strong>"HeartQuest10"</strong> at checkout for HQP member savings.</p>
+        </div>
+        <div class="product-pricing">
+          <a href="https://hoolest.com?sca_ref=5172964.33aMsJjcPD" target="_blank" class="btn btn-primary">Purchase VeRelief</a>
+        </div>
+      </div>
+      <div class="product-visual">
+        <div class="product-badge">Member Savings</div>
+        <div class="product-icon">⚡</div>
+        <h3>VeRelief</h3>
+        <div class="tagline">Vagus Nerve Stimulator</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

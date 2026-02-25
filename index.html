@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+/* HOME-SPECIFIC STYLES */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #0d2a50 100%);
+  display: flex; align-items: center; justify-content: center;
+  padding: 100px 40px 80px;
+  position: relative; overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% -10%, rgba(14,140,140,0.22), transparent),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(26,58,107,0.18), transparent);
+  pointer-events: none;
+}
+.hero-grid-overlay {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-content { position: relative; max-width: 760px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(200,149,42,0.1); border: 1px solid rgba(200,149,42,0.25);
+  border-radius: 24px; padding: 6px 18px; margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  color: white; font-weight: 700; line-height: 1.1;
+  margin-bottom: 24px;
+}
+.hero h1 em { color: var(--teal-light); font-style: italic; }
+.hero p {
+  font-size: 1.12rem; color: rgba(255,255,255,0.72);
+  line-height: 1.75; margin-bottom: 40px;
+  max-width: 580px; margin-left: auto; margin-right: auto;
+}
+.hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.hero-scroll {
+  position: absolute; bottom: 36px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  color: rgba(255,255,255,0.35); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+/* ABOUT SECTION */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  align-items: center; max-width: 1100px; margin: 0 auto;
+}
+.about-visual {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  border-radius: 20px; padding: 48px 40px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.about-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,140,140,0.2), transparent);
+}
+.about-visual-logo {
+  width: 100px; height: 100px; border-radius: 24px;
+  background: linear-gradient(135deg, var(--teal), var(--blue-mid));
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 36px; color: white; font-weight: 700;
+  margin: 0 auto 24px;
+  position: relative;
+}
+.about-visual h3 {
+  font-family: 'Libre Baskerville', serif;
+  color: white; font-size: 1.4rem; margin-bottom: 10px;
+  position: relative;
+}
+.about-visual p { color: rgba(255,255,255,0.6); font-size: 0.9rem; line-height: 1.6; position: relative; }
+.about-stat-row {
+  display: flex; gap: 16px; margin-top: 28px;
+  position: relative;
+}
+.about-stat {
+  flex: 1; background: rgba(255,255,255,0.07);
+  border-radius: 12px; padding: 16px;
+  text-align: center;
+}
+.about-stat .num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2rem; color: var(--teal-light); font-weight: 700;
+}
+.about-stat .lbl { font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 0.5px; }
+
+/* WHY REGISTER */
+.reasons-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px; margin-top: 48px;
+}
+.reason-card {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 14px; padding: 28px;
+  transition: all 0.3s ease;
+}
+.reason-card:hover { box-shadow: 0 10px 32px rgba(10,22,40,0.08); transform: translateY(-3px); }
+.reason-icon {
+  font-size: 28px; margin-bottom: 14px;
+}
+.reason-card h3 { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
+.reason-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+
+/* CTA BANNER */
+.cta-banner {
+  background: linear-gradient(135deg, var(--teal), var(--blue-mid));
+  padding: 80px 40px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(255,255,255,0.07), transparent);
+}
+.cta-banner h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  color: white; margin-bottom: 16px; position: relative;
+}
+.cta-banner p { color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto; position: relative; }
+.cta-banner .btn-group { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+@media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<section class="hero">
+  <div class="hero-grid-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">🫀 HeartQuest Global Solutions</div>
+    <h1>Advanced HRV Education for<br><em>Health Professionals</em></h1>
+    <p>15+ years educating clinicians on heart rate variability, functional assessment, and integrative evaluation tools. Members get exclusive resources, advanced education, and clinical support.</p>
+    <div class="hero-actions">
+      <a href="advanced-education.html" class="btn btn-primary btn-lg">Explore Education</a>
+      <a href="index.html#about" class="btn btn-outline-white btn-lg">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-scroll">↓ Scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="section-label">About HQP Global</div>
+      <h2 class="section-title">Bringing Advanced HRV Technology to Practitioners</h2>
+      <div class="section-divider"></div>
+      <p style="font-size:1rem; line-height:1.75; color:var(--text-body); margin-bottom:20px;">HeartQuest Global, LLC ("HQP") has been educating health professionals for 15 years on advanced heart rate variability concepts. Our team originally brought this technology from Russia to the USA and have been continually improving it.</p>
+      <p style="font-size:1rem; line-height:1.75; color:var(--text-body); margin-bottom:28px;">We have incorporated other modalities including the Brain Gauge, Quantum VII RJL Bioimpedance (BIA) and will continue to incorporate additional evaluation tools. For purchasing, visit our sister website <a href="https://www.hqp-global.com/" target="_blank" style="color:var(--teal);">hqp-global.com</a>.</p>
+      <a href="products.html" class="btn btn-primary">View Integrated Products</a>
+    </div>
+    <div class="reveal">
+      <div class="about-visual">
+        <div class="about-visual-logo">HQ</div>
+        <h3>HeartQuest Professional</h3>
+        <p>Advanced HRV & Functional Assessment Tool — the foundation of our clinical education platform.</p>
+        <div class="about-stat-row">
+          <div class="about-stat"><div class="num">15+</div><div class="lbl">Years</div></div>
+          <div class="about-stat"><div class="num">4</div><div class="lbl">Modalities</div></div>
+          <div class="about-stat"><div class="num">3</div><div class="lbl">Doctors</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THIS WEBSITE -->
+<section class="section section-alt">
+  <div class="section-wide">
+    <div style="text-align:center; max-width:640px; margin: 0 auto 48px;" class="reveal">
+      <div class="section-label">Welcome to the Advanced Website</div>
+      <h2 class="section-title">A Dedicated Platform for HQP Health Providers</h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="section-subtitle">Members access resources for success, advanced education, and supporting solutions — educational videos, clinical tools, and more to enhance your practice.</p>
+    </div>
+    <div class="reasons-grid">
+      <div class="reason-card reveal">
+        <div class="reason-icon">🔓</div>
+        <h3>Safe Information Exchange</h3>
+        <p>We need the freedom to express information in a safe medium — designed for health providers who have the HQP and need additional help and education.</p>
+      </div>
+      <div class="reason-card reveal">
+        <div class="reason-icon">🏢</div>
+        <h3>Multi-Company Solutions</h3>
+        <p>Our solutions may come from multiple nutrition companies that can be most effective for your patients. We host education from educators who enhance your clinical skills.</p>
+      </div>
+      <div class="reason-card reveal">
+        <div class="reason-icon">🛠️</div>
+        <h3>Clinical Tools</h3>
+        <p>A variety of helpful tools placed on this site to help you in your clinic. The Newsletter is also accessible here in case you're unable to receive it via email.</p>
+      </div>
+      <div class="reason-card reveal">
+        <div class="reason-icon">🎥</div>
+        <h3>Video Education</h3>
+        <p>Some video education is free, some monetized. Dr. Karimov, Dr. Kessler, and Dr. Becchetti review interpretation of actual HQP, Brain Gauge cases and more.</p>
+      </div>
+      <div class="reason-card reveal">
+        <div class="reason-icon">🧠</div>
+        <h3>Interconnected Systems</h3>
+        <p>The nervous system connects to Meridians from Chinese medicine giving indications of Minerals, Hormones, and more. Our team is uncovering these amazing relationships.</p>
+      </div>
+      <div class="reason-card reveal">
+        <div class="reason-icon">🌍</div>
+        <h3>Global Community</h3>
+        <p>Join a global network of health professionals all using the HeartQuest Professional to elevate patient care with advanced functional assessment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section">
+  <div class="section-wide">
+    <div style="text-align:center; max-width:520px; margin:0 auto 48px;" class="reveal">
+      <div class="section-label">Our Team</div>
+      <h2 class="section-title">The Doctors Behind HQP</h2>
+      <div class="section-divider" style="margin:20px auto;"></div>
+      <p class="section-subtitle">Collectively, the entire team has been exploring how all systems in the body are interconnected.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-avatar">MK</div>
+        <h3>Dr. Michael Kessler</h3>
+        <div class="team-title">D.C., C.C.S.P.</div>
+        <p>Co-developer of the HeartQuest Professional system and pioneer in bringing advanced HRV technology to the US clinical market.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">SB</div>
+        <h3>Dr. Sondra Becchetti</h3>
+        <div class="team-title">D.C., F.I.A.C.A.</div>
+        <p>Expert in functional assessment and integration of Chinese medicine meridian systems with HRV diagnostic protocols.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">JK</div>
+        <h3>Dr. Javdat Karimov</h3>
+        <div class="team-title">NMD</div>
+        <p>Naturopathic physician who originally helped bring this Russian-developed technology to American practitioners.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-avatar">SH</div>
+        <h3>Shawn Hoover</h3>
+        <div class="team-title">CTO</div>
+        <p>Chief Technology Officer managing technical operations, system integration, and member support for HeartQuest Global.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Ready to Elevate Your Clinical Practice?</h2>
+  <p>Join our member community of health professionals and access the full HeartQuest education library.</p>
+  <div class="btn-group">
+    <a href="advanced-education.html" class="btn btn-outline-white btn-lg">Advanced Education</a>
+    <a href="guided-setup.html" class="btn btn-gold btn-lg">Book Guided Setup — $150</a>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>

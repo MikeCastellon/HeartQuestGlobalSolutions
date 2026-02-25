@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HQP Tutorials | HeartQuest Global Solutions</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px; margin-top: 48px;
+}
+.tutorial-card {
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 16px; overflow: hidden;
+  transition: all 0.3s ease;
+}
+.tutorial-card:hover { box-shadow: 0 10px 30px rgba(10,22,40,0.1); transform: translateY(-4px); }
+.tutorial-header {
+  background: linear-gradient(160deg, var(--navy), var(--blue));
+  padding: 28px; position: relative; overflow: hidden;
+}
+.tutorial-header::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(14,140,140,0.2), transparent);
+}
+.tutorial-num {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem; font-weight: 700; color: rgba(255,255,255,0.12);
+  position: absolute; top: 12px; right: 20px;
+  line-height: 1;
+}
+.tutorial-icon { font-size: 32px; margin-bottom: 10px; position: relative; }
+.tutorial-header h3 {
+  font-family: 'Libre Baskerville', serif;
+  color: white; font-size: 1.05rem; position: relative;
+}
+.tutorial-body { padding: 24px; }
+.tutorial-body p { font-size: 0.9rem; color: var(--text-body); line-height: 1.65; margin-bottom: 16px; }
+.tutorial-steps { list-style: none; }
+.tutorial-steps li {
+  font-size: 0.86rem; color: var(--text-body);
+  padding: 7px 0 7px 22px;
+  position: relative; border-bottom: 1px solid var(--light-gray);
+}
+.tutorial-steps li:last-child { border-bottom: none; }
+.tutorial-steps li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--teal); font-weight: 600;
+}
+.setup-flow {
+  max-width: 800px; margin: 0 auto 60px;
+  background: white; border: 1px solid var(--light-gray);
+  border-radius: 20px; padding: 48px;
+}
+.flow-steps {
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 32px;
+}
+.flow-step {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 20px 0; position: relative;
+}
+.flow-step:not(:last-child)::after {
+  content: ''; position: absolute;
+  left: 19px; top: 56px; bottom: 0;
+  width: 2px; background: var(--light-gray);
+}
+.flow-step-num {
+  width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--blue-mid));
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: white; font-size: 0.9rem;
+  position: relative; z-index: 1;
+}
+.flow-step-content h4 { font-family: 'Libre Baskerville', serif; font-size: 1rem; color: var(--navy); margin-bottom: 6px; }
+.flow-step-content p { font-size: 0.88rem; color: var(--text-body); line-height: 1.6; }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Resources</div>
+  <h1>HQP Tutorials</h1>
+  <p>Step-by-step guides and how-to tutorials for getting the most out of your HeartQuest Professional system and integrated modalities.</p>
+</div>
+
+<section class="section">
+  <div class="section-wide">
+    <div class="setup-flow reveal">
+      <div class="section-label">Getting Started</div>
+      <h2 class="section-title">New HQP Owner Setup Flow</h2>
+      <div class="section-divider"></div>
+      <p style="font-size:0.95rem; color:var(--text-body); line-height:1.7; margin-bottom:8px;">Follow these steps to get your HeartQuest Professional up and running. For live help, book a Guided Setup session.</p>
+      <div class="flow-steps">
+        <div class="flow-step">
+          <div class="flow-step-num">1</div>
+          <div class="flow-step-content">
+            <h4>Register for Member Access</h4>
+            <p>Complete the Sign Up process to register as a Health Provider member on this site. You'll need to verify your professional credentials.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">2</div>
+          <div class="flow-step-content">
+            <h4>Install the HQP Software</h4>
+            <p>Download and install the HeartQuest Professional software on your clinical computer. Follow the installation guide provided with your device.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">3</div>
+          <div class="flow-step-content">
+            <h4>Set Up Your HQP Account</h4>
+            <p>Configure your practice settings, clinician profile, and patient database within the HQP software. This is covered in detail in the Guided Setup session.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">4</div>
+          <div class="flow-step-content">
+            <h4>Connect Integrated Devices</h4>
+            <p>Connect and calibrate any integrated modalities (Brain Gauge, Quantum VII BIA) so their data automatically populates into the HQP.</p>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-num">5</div>
+          <div class="flow-step-content">
+            <h4>Run Your First Assessment</h4>
+            <p>Walk through a complete patient assessment using the HQP with guidance from our tutorial videos. Review interpretation guides in the Education section.</p>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:32px;">
+        <a href="guided-setup.html" class="btn btn-primary">Book Guided Setup — $150</a>
+      </div>
+    </div>
+
+    <div style="text-align:center; max-width:520px; margin:0 auto 40px;" class="reveal">
+      <div class="section-label">Tutorial Library</div>
+      <h2 class="section-title">How-To Tutorials</h2>
+      <div class="section-divider" style="margin:16px auto;"></div>
+    </div>
+
+    <div class="tutorial-grid">
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">01</div>
+          <div class="tutorial-icon">💻</div>
+          <h3>Software Installation &amp; Setup</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>Complete guide to installing and configuring the HeartQuest Professional software on Windows.</p>
+          <ul class="tutorial-steps">
+            <li>System requirements check</li>
+            <li>Download and installation</li>
+            <li>License activation</li>
+            <li>Initial configuration</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">02</div>
+          <div class="tutorial-icon">👤</div>
+          <h3>Patient Profile Management</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>How to create, manage, and organize patient profiles in the HQP system for efficient clinical workflow.</p>
+          <ul class="tutorial-steps">
+            <li>Creating new patient profiles</li>
+            <li>Adding demographics</li>
+            <li>Managing visit history</li>
+            <li>Generating progress reports</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">03</div>
+          <div class="tutorial-icon">📡</div>
+          <h3>Running an HRV Assessment</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>Step-by-step instructions for conducting a complete HRV assessment session with the HeartQuest Professional.</p>
+          <ul class="tutorial-steps">
+            <li>Patient preparation</li>
+            <li>Sensor placement</li>
+            <li>Running the 5-minute scan</li>
+            <li>Saving and reviewing results</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">04</div>
+          <div class="tutorial-icon">🧠</div>
+          <h3>Brain Gauge Integration</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>Connecting and running Brain Gauge assessments so data populates automatically into the HeartQuest Professional.</p>
+          <ul class="tutorial-steps">
+            <li>Device pairing</li>
+            <li>Running the cognitive test battery</li>
+            <li>Syncing with HQP</li>
+            <li>Interpreting combined results</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">05</div>
+          <div class="tutorial-icon">⚡</div>
+          <h3>Quantum VII BIA Setup</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>Setting up the RJL Quantum VII Bioimpedance Analyzer and configuring the HQP data integration.</p>
+          <ul class="tutorial-steps">
+            <li>Hardware setup</li>
+            <li>Patient electrode placement</li>
+            <li>Running BIA analysis</li>
+            <li>Reading Phase Angle results</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tutorial-card reveal">
+        <div class="tutorial-header">
+          <div class="tutorial-num">06</div>
+          <div class="tutorial-icon">📊</div>
+          <h3>Generating Clinical Reports</h3>
+        </div>
+        <div class="tutorial-body">
+          <p>Creating comprehensive patient reports from the HQP that combine data from all integrated modalities.</p>
+          <ul class="tutorial-steps">
+            <li>Report customization</li>
+            <li>Printing and exporting</li>
+            <li>Trend analysis</li>
+            <li>Patient handout versions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;" class="reveal">
+      <p style="color:var(--text-body); margin-bottom:20px;">Still need help? Book a 1-on-1 guided setup session.</p>
+      <a href="guided-setup.html" class="btn btn-primary btn-lg">Book Guided Setup</a>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+<script src="components.js"></script>
+</body>
+</html>
