@@ -32,16 +32,17 @@ body {
 /* ── NAVIGATION ─────────────────────────────────────────── */
 #site-nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-  background: rgba(10,22,40,0.97);
+  background: rgba(255,255,255,0.97);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(200,149,42,0.25);
+  border-bottom: 1px solid rgba(10,22,40,0.1);
   padding: 0 40px;
-  height: 70px;
+  height: 106px;
   display: flex; align-items: center; justify-content: space-between;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 16px rgba(10,22,40,0.07);
 }
 
-#site-nav.scrolled { height: 62px; }
+#site-nav.scrolled { height: 90px; }
 
 .nav-logo {
   display: flex; align-items: center; gap: 12px;
@@ -59,7 +60,7 @@ body {
 }
 
 .nav-logo-img {
-  height: 48px;
+  height: 90px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -87,7 +88,7 @@ body {
 
 .nav-links > li > a,
 .nav-links > li > .nav-dropdown-toggle {
-  color: rgba(255,255,255,0.85);
+  color: var(--navy);
   text-decoration: none;
   font-size: 12.5px;
   font-weight: 500;
@@ -102,25 +103,35 @@ body {
 
 .nav-links > li > a:hover,
 .nav-links > li > .nav-dropdown-toggle:hover {
-  color: white;
-  background: rgba(255,255,255,0.08);
+  color: var(--teal);
+  background: rgba(14,140,140,0.07);
 }
 
 .nav-links > li > a.active {
-  color: var(--gold-light);
+  color: var(--teal);
 }
 
 .nav-dropdown { position: relative; }
 
 .nav-dropdown-menu {
   display: none;
-  position: absolute; top: calc(100% + 8px); left: 0;
+  position: absolute; top: 100%; left: 0;
   min-width: 200px;
-  background: var(--navy);
-  border: 1px solid rgba(200,149,42,0.2);
+  background: white;
+  border: 1px solid rgba(10,22,40,0.1);
   border-radius: 10px;
   padding: 8px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  padding-top: 12px;
+  margin-top: 0;
+  box-shadow: 0 12px 32px rgba(10,22,40,0.12);
+}
+
+/* Bridge gap so mouse can move from toggle to menu */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -10px; left: 0; right: 0;
+  height: 10px;
 }
 
 .nav-dropdown:hover .nav-dropdown-menu,
@@ -128,7 +139,7 @@ body {
 
 .nav-dropdown-menu a {
   display: block;
-  color: rgba(255,255,255,0.8);
+  color: var(--navy);
   text-decoration: none;
   font-size: 12px; font-weight: 500; letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -138,8 +149,8 @@ body {
 }
 
 .nav-dropdown-menu a:hover {
-  color: white;
-  background: rgba(255,255,255,0.08);
+  color: var(--teal);
+  background: rgba(14,140,140,0.07);
 }
 
 .nav-cta {
@@ -153,12 +164,12 @@ body {
 .mobile-menu-toggle {
   display: none;
   background: none; border: none; cursor: pointer;
-  color: white; font-size: 22px;
+  color: var(--navy); font-size: 22px;
 }
 
 /* ── PAGE HERO ───────────────────────────────────────────── */
 .page-hero {
-  padding: 140px 40px 80px;
+  padding: 160px 40px 80px;
   background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 50%, #0d2545 100%);
   position: relative; overflow: hidden;
   text-align: center;
